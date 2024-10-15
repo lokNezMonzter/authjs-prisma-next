@@ -1,14 +1,14 @@
-import Link from "next/link";
+import { handleSignIn } from "@/actions/actions";
 
 export default function LoginButton() {
   return (
-    <>
+    <form action={handleSignIn}>
       <button
-        type="button"
-        className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+        type="submit"
+        className="text-white bg-blue-700 hover:bg-blue-800  font-medium rounded-lg text-base px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none"
       >
-        <Link href="/auth/signin">Sign In</Link>
+        Sign In
       </button>
-    </>
+    </form>
   );
 }

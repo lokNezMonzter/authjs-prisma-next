@@ -23,8 +23,8 @@ export default function UserButton({ user }: UserButtonProps) {
           <Image
             src={user.image || avatarPlaceholder}
             alt="User profile picture"
-            width={40}
-            height={40}
+            width={50}
+            height={50}
             className="aspect-square rounded-full bg-background object-cover"
           />
         </Button>
@@ -34,7 +34,7 @@ export default function UserButton({ user }: UserButtonProps) {
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
           <DropdownMenuItem asChild>
-            <Link href="#">
+            <Link href="/settings">
               <Settings className="mr-2 h-4 w-4" />
               <span>Settings</span>
             </Link>
